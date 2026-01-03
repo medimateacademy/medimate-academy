@@ -18,3 +18,73 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* ===== Mobile Responsive Fixes ===== */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Navbar */
+  nav {
+    padding: 12px 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  /* Why Choose Us */
+  .why-choose {
+    padding: 40px 20px;
+  }
+
+  .why-choose h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .why-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .why-card {
+    width: 100%;
+  }
+
+}

@@ -2,16 +2,19 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+// UPDATED: use environment variables instead of hardcoded keys
 const firebaseConfig = {
-  apiKey: "AIzaSyCOO5NtfV0u3meC42QLuNuldffHv7TYw4c",
-  authDomain: "medimate-academy-45b1c.firebaseapp.com",
-  projectId: "medimate-academy-45b1c",
-  storageBucket: "medimate-academy-45b1c.firebasestorage.app",
-  messagingSenderId: "703414834554",
-  appId: "1:703414834554:web:5eb7453eabc926cddbb2c3"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
+// Initialize Firebase (same as before)
 const app = initializeApp(firebaseConfig);
 
+// Exports remain unchanged (no app-wide breakage)
 export const auth = getAuth(app);
 export const db = getFirestore(app);
